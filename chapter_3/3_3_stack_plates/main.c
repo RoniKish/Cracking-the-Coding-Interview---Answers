@@ -42,10 +42,10 @@ void push(my_SetOfStacks *StackSet, int item)
         printf("The stack has reached the threshold, a new stack was created\n");
         StackSet->stacks_array = (my_stack *) realloc(StackSet->stacks_array, (++StackSet->current_stack + 1) * sizeof(my_stack));
         StackSet->stacks_array[StackSet->current_stack].top = -1;
-        StackSet->stacks_array[StackSet->current_stack].array[StackSet->stacks_array[StackSet->current_stack].top] = item;
+        StackSet->stacks_array[StackSet->current_stack].array[++StackSet->stacks_array[StackSet->current_stack].top] = item;
     }
     else
-        StackSet->stacks_array[StackSet->current_stack].array[StackSet->stacks_array[StackSet->current_stack].top] = item;
+        StackSet->stacks_array[StackSet->current_stack].array[++StackSet->stacks_array[StackSet->current_stack].top] = item;
     printf("%d was pushed to stack\n", item);
 }
 
