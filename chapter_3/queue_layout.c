@@ -96,5 +96,6 @@ int main()
 	front(queue);
 	rear(queue);
 
+    free(queue);
 	return 0;
 }
