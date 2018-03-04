@@ -21,14 +21,14 @@ my_queue *createQueue(int capacity)
 
 int isEmpty(my_queue *queue)
 {
-	return (queue->size == 0);
+	return queue->size == 0;
 }
 
 void push(my_queue *queue, int item)
 {
 	if (queue->size == queue->capacity)
 	{
-		printf("The queue is full, did no insert %d\n", item);
+		printf("The queue is full, did not insert %d\n", item);
 		return;
 	}
 	queue->rear = (queue->rear + 1) % queue->capacity;
@@ -49,7 +49,7 @@ int pull(my_queue *queue)
 		int item = queue->array[queue->front];
 		queue->front = (queue->front + 1) % queue->capacity;
 		queue->size = queue->size - 1;
-		printf("%d came out of queue\n", item);
+		printf("%d came out of the queue\n", item);
 		return item;
 	}
 
@@ -64,7 +64,7 @@ int front(my_queue *queue)
 	}
 	else
 	{
-		printf("Front item is %d\n", queue->front);
+		printf("Front item is %d\n", queue->array[queue->front]);
 		return queue->array[queue->front];
 	}
 }
@@ -87,15 +87,15 @@ int main()
 	scanf("%d", &size);
 	my_queue *queue = createQueue(size);
 
-	push(queue, 10);
-	push(queue, 20);
+	push(queue, 1);
+	push(queue, 5);
+	push(queue, 3);
+	push(queue, 7);
 	pull(queue);
 	pull(queue);
-	pull(queue);
-
 	front(queue);
 	rear(queue);
 
-    free(queue);
+	free(queue);
 	return 0;
 }
