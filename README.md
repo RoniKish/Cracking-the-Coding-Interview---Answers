@@ -1,5 +1,5 @@
-# Cracking-the-Coding-Interview-in-C
-Answers in C/Java for Cracking the Coding Interview
+# Cracking-the-Coding-Interview-in-C/C++
+Answers in C/C++ for Cracking the Coding Interview
 
 This GitHub repository was made for learning purposes, And is free of use to any 
 one who wishes so.
