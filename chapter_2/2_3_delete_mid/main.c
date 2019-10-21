@@ -57,6 +57,7 @@ int main()
 		add_node_last(head, i);
 	}
 	print_list(head);
+	printf("Test: %d\n", &(head->next->next->next));
 	del_node(&(head->next->next->next));
 	print_list(head);
 

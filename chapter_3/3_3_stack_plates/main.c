@@ -83,6 +83,6 @@ int main()
     push(my_set, 30);
     pull(my_set);
 
-
+    free(my_set);
     return 0;
 }
